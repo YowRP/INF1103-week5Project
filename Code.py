@@ -4,33 +4,19 @@ import os
 INVENTORY_FILE = "inventory.json"
 
 
-def load_orders():
-    """Load previously saved orders, or start empty if the file doesn't exist."""
-    orders = []
-    try:
-        with open(INVENTORY_FILE, "r", encoding="utf-8") as file:
-            lines = file.readlines()
-        for line in lines:
-            line = line.strip()
-            if line == "":
-                continue
-            parts = line.split(",")
-            order_id = int(parts[0])
-            product_name = parts[1]
-            quantity = int(parts[2])
-            orders.append((order_id, product_name, quantity))
-    except FileNotFoundError:
-        orders = []
-    return orders
+def load_inventory():
+    if os.path.exists(INVENTORY_FILE):
+        print("inventory.json found.")
+        with open(INVENTORY_FILE, "r", encoding="utf-8") as f:
+            inventory = json.load(f)
+        print("Inventory loaded successfully.")
+        return inventory
+    print("inventory.json not found. Starting with an empty inventory.")
+    return []
 
-
-def display_orders(orders):
-    """Print all current orders."""
-    print("Current Orders:\n")
-    for order_id, product_name, quantity in orders:
-        print(str(order_id) + ", " + product_name + ", " + str(quantity))
-    print()
-
+def save_inventory(inventory):
+    with open(INVENTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(inventory, f, indent=4)
 
 def get_next_id(orders):
     """Work out the next order ID, continuing from the last one saved."""
