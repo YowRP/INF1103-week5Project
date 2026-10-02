@@ -77,9 +77,10 @@ def update_stock(inventory):
         new_stock = int(input("Enter new stock quantity: ").strip())
         product["stock"] = new_stock
         print("Stock updated successfully.")
+
     except ValueError:
         print("Invalid input. Stock not updated.")
-        
+
 def main():
     """Run the inventory management program."""
     print("=" * 40)
@@ -104,9 +105,9 @@ def main():
         elif choice == "2":
             add_product(inventory)
         elif choice == "3":
-            pass  # TODO: update_stock(inventory)
+            update_stock(inventory)
         elif choice == "4":
-            pass  # TODO: search_product(inventory)
+           search_product(inventory)
         elif choice == "5":
             print("Saving inventory...")
             save_inventory(inventory)
