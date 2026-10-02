@@ -57,22 +57,42 @@ def display_all(inventory):
     print("-" * 48)
 
 def main():
-    """Run the order tracking program."""
-    print ("="*40)
-    print ("INVENTORY MANAGEMENT SYSTEM")
+    """Run the inventory management program."""
+    print("=" * 40)
+    print("INVENTORY MANAGEMENT SYSTEM")
+    print("=" * 40)
 
     inventory = load_inventory()
-    display_all(inventory)
 
     while True:
         print("----------- MENU -----------")
-        # print options 1-6
+        print("1. Display All Products")
+        print("2. Add Product")
+        print("3. Update Stock")
+        print("4. Search Product")
+        print("5. Save Inventory")
+        print("6. Exit")
+        print("----------------------------")
         choice = input("Enter option: ").strip()
-        if choice == "1": ...
+
+        if choice == "1":
+            display_all(inventory)
+        elif choice == "2":
+            add_product(inventory)
+        elif choice == "3":
+            pass  # TODO: update_stock(inventory)
+        elif choice == "4":
+            pass  # TODO: search_product(inventory)
+        elif choice == "5":
+            print("Saving inventory...")
+            save_inventory(inventory)
+            print("Inventory saved successfully to inventory.json.")
         elif choice == "6":
             print("Saving inventory before exit...")
             save_inventory(inventory)
-            print ("THANK YOU FOR USING THE INVENTORY MANAGEMENT SYSTEM!")
+            print("Inventory saved successfully.")
+            print("Thank you for using Inventory Management System.")
+            print("Program terminated.")
             break
         else:
             print("Invalid option.")
