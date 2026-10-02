@@ -20,7 +20,7 @@ def save_inventory(inventory):
 
 
 def add_product(inventory):
-    print ("Add new product")
+    print("Add new product")
     product_id = input("Enter product ID: ").strip()
     for i in inventory:
         if i["id"] == product_id:
@@ -29,10 +29,14 @@ def add_product(inventory):
 
     name = input("Enter product name: ").strip()
 
-    price = input("Enter product price: ").float().strip()
-    quantity = input("Enter product quantity: ").int().strip()
+    try:
+        price = float(input("Enter product price: ").strip())
+        stock = int(input("Enter stock quantity: ").strip())
+    except ValueError:
+        print("Invalid input. Product not added.")
+        return
 
-    product = {"id": product_id, "name": name, "price": price, "quantity": quantity}
+    product = {"id": product_id, "name": name, "price": price, "stock": stock}
     inventory.append(product)
     print("Product added successfully.")
 
