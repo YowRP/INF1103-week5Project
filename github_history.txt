@@ -1,0 +1,90 @@
+commit d54ed7d254ebec97ab6a0a6fa6d570d636aaab39 (HEAD -> master)
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:52:20 2026 +0800
+
+    Rerun code and small changes
+
+commit cdc4c9f6358b4da3b81c73bc1073c2404a81ec9d
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:50:16 2026 +0800
+
+    Load inventory defination added
+
+commit c198df3b4abb291a014bb3278ac2c92dc4a3b3ef
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:46:40 2026 +0800
+
+    Added README and also dockerfile
+
+commit 1448e7dbb6b4a5f6f3282b4ccaa8c5fed126b331
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:43:53 2026 +0800
+
+    altered main function for choice 3 and 4
+
+commit 6758eed8f1c2bc3238fbdc14f526f99b133051c4
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:41:40 2026 +0800
+
+    Try and except function for update stock defination
+
+commit 91937c9849d5f882992486a9261f4d5451cf828f
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:40:25 2026 +0800
+
+    defination for update stock and also find product
+
+commit f20c12deba3791ddaabbd889bee1e5ec234dfd3c
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:18:24 2026 +0800
+
+    Main defination to changed into a better terminal output
+
+commit 25d1967036f42eacde55793a070dca578c5a5d28
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:13:44 2026 +0800
+
+    Corrections to both inventory in display all and also finidng product
+
+commit 562bc49018d23d89a585b0183b52b7a416360dee
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:11:11 2026 +0800
+
+    Changes to defination of add product
+
+commit 0358898872cefa9133dd7d65539df4fa4c511f04
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 16:04:35 2026 +0800
+
+    Added changes for finding product
+
+commit 60058b15a31124d2ab44ae17d48c1d10c63e5d6c
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 15:52:43 2026 +0800
+
+    Added search category
+
+commit 3ab8896fd5b9ef4c316ce09f17cf0740628cdec2
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 15:46:18 2026 +0800
+
+    New def of Addition of products added.
+
+commit 05662e027803d081a174e665d431d752f7ae68b3
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 15:29:18 2026 +0800
+
+    Changes into code to fit into JSON file
+
+commit 48b1388b35e9dbaed8a8162f5b8285093baa2631
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 15:22:19 2026 +0800
+
+    Changed def load_inventory and save_inventory to match with json file
+
+commit 94bc255b32068836ac431155ce71cd6d511a6c77
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 2 15:20:51 2026 +0800
+
+    Added imports for json file
+(END)
