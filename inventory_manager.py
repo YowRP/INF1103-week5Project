@@ -36,7 +36,22 @@ def add_product(inventory):
     inventory.append(product)
     print("Product added successfully.")
 
+def find_inventory(inventory):
+    #find product by ID and also update_stock
 
+    find_product_id = input("Enter product ID: ").strip()
+    for product in inventory:
+        if product["id"] == find_product_id:
+            print(f"Product found: ID: {product['id']}, Name: {product['name']}, Quantity: {product['quantity']}, Price: {product['price']}")
+            return product
+
+        else: 
+            print("Product not found.")
+            choice = input("Do you want to add this product? (y/n): ").strip().lower()
+            if choice == "y":
+                add_product(inventory)
+
+    
 
 def display_all(inventory):
     for i in inventory:
@@ -45,9 +60,6 @@ def display_all(inventory):
         if inventory == []:
             print("Inventory is empty.")
             return choice == "1"
-    
-
-
 
 def main():
     """Run the order tracking program."""
