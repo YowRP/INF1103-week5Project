@@ -73,7 +73,13 @@ def update_stock(inventory):
             print(f"Product found: ID: {product['id']}, Name: {product['name']}, Price: ${product['price']:.2f}, Stock: {product['stock']}")
         else:
             return None
-    
+    try:
+        new_stock = int(input("Enter new stock quantity: ").strip())
+        product["stock"] = new_stock
+        print("Stock updated successfully.")
+    except ValueError:
+        print("Invalid input. Stock not updated.")
+        
 def main():
     """Run the inventory management program."""
     print("=" * 40)
