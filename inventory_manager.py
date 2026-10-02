@@ -23,7 +23,7 @@ def add_product(inventory):
     print ("Add new product")
     product_id = input("Enter product ID: ").strip()
     for i in inventory:
-        if i["ID"] == product_id:
+        if i["id"] == product_id:
             print("Product ID already exists.")
             return
 
@@ -63,6 +63,9 @@ def display_all(inventory):
 
 def main():
     """Run the order tracking program."""
+    print ("="*40)
+    print ("INVENTORY MANAGEMENT SYSTEM")
+
     inventory = load_inventory()
     display_all(inventory)
 
@@ -74,6 +77,7 @@ def main():
         elif choice == "6":
             print("Saving inventory before exit...")
             save_inventory(inventory)
+            print ("THANK YOU FOR USING THE INVENTORY MANAGEMENT SYSTEM!")
             break
         else:
             print("Invalid option.")
