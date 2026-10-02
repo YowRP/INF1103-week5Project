@@ -56,6 +56,24 @@ def display_all(inventory):
         print(f"ID: {p['id']} | Name: {p['name']} | Price: ${p['price']:.2f} | Stock: {p['stock']}")
     print("-" * 48)
 
+def search_product(inventory):
+    print ("Search for a product")
+    product_id = input("Enter product ID to search: ").strip()
+    for product in inventory:
+        if product["id"] == product_id:
+            print(f"Product found: ID: {product['id']}, Name: {product['name']}, Price: ${product['price']:.2f}, Stock: {product['stock']}")
+        else:
+            return None
+
+def update_stock(inventory):
+    print("Update stock for a product")
+    product_id = input("Enter product ID to update stock: ").strip()
+    for product in inventory:
+        if product["id"] == product_id:
+            print(f"Product found: ID: {product['id']}, Name: {product['name']}, Price: ${product['price']:.2f}, Stock: {product['stock']}")
+        else:
+            return None
+    
 def main():
     """Run the inventory management program."""
     print("=" * 40)
