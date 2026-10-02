@@ -20,7 +20,33 @@ def save_inventory(inventory):
 
 
 def add_product(inventory):
-    user_input = ("Enter ID number: ")
+    print ("Add new product")
+    product_id = input("Enter product ID: ").strip()
+    for i in inventory:
+        if i["ID"] == product_id:
+            print("Product ID already exists.")
+            return
+
+    name = input("Enter product name: ").strip()
+
+    price = input("Enter product price: ").float().strip()
+    quantity = input("Enter product quantity: ").int().strip()
+
+    product = {"id": product_id, "name": name, "price": price, "quantity": quantity}
+    inventory.append(product)
+    print("Product added successfully.")
+
+
+
+def display_all(inventory):
+    for i in inventory:
+        print(f"ID: {i['id']}, Name: {i['name']}, Quantity: {i['quantity']}, Price: {i['price']}")
+
+        if inventory == []:
+            print("Inventory is empty.")
+            return choice == "1"
+    
+
 
 
 def main():
